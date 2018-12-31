@@ -162,10 +162,87 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 
 
+/* Footer start */
+.footer{
+  line-height: 35px;
+  background-color: #3d434c;
+  color:#ffffff;
+  margin-top: 40px;
+}
+
+.footer-list-color{
+	color:#ffffff;
+}
+
+.footer-list-color:hover{
+	color: #53cb93;
+	text-decoration: underline;
+}
 
 
 
+.bottom-align{
+  text-align: center;
+  padding:30px 0px 10px 0px;
+ 
+}
 
+.bottom-align li a i{
+  padding-right: 10px;
+}
+
+
+
+ul.social-buttons {
+  margin-bottom: 15px;
+}
+ul.social-buttons li a {
+  padding-left:7px;
+  display: block;
+  background-color: #5c5b57;
+  height: 43px;
+  width: 43px;
+  font-size: 30px;
+  line-height: 40px;
+  border-radius: 100%;
+  color: #FFF;
+ 
+
+  /*-webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;*/
+}
+ 
+
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  border-radius: 100%;
+ /* padding-left: 7px;*/
+  color: #53cb93;
+  cursor: pointer;
+}
+
+
+
+.fa-arrow-alt-circle-up{
+	font-size: 35px;
+	color: #FFF;
+}
+
+.fa-arrow-alt-circle-up:hover {
+	font-size: 35px;
+	/*color: #737979;*/
+	color: #53cb93;
+
+}
+
+.returntop
+{
+	transition:all 0.3s ;
+}
+/* Footer End */
 
 
 
