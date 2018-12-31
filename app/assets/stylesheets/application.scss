@@ -161,10 +161,64 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 
 
+/* Sidebar */
+#sidebar-wrapper {
+	z-index: 1;
+	position: absolute;
+	width: 0px;
+	height: 100%;
+	overflow-y: hidden;
+	background: #2C3E50;
+	border: 2px solid red;
+	opacity: 0.9;
+}
+
+#menu-toggle{
+	margin-right: 15px;
+}
+
+/* Sidebar Main content*/
+#page-content-wrapper{
+	width: 100%;
+	position: absolute;
+	padding: 15px;
+	border:5px solid green;
+}
 
 
+/* change the bar to display */
+#wrapper.menuDisplayed #sidebar-wrapper{
+	width:160px;
+}
+
+#wrapper.menuDisplayed #page-content-wrapper{
+	padding-left:160px;
 
 
+}
+
+/*Side bar styling */
+.sidebar-nav{
+	padding: 0px;
+	list-style: none;
+}
+
+
+.sidebar-nav li {
+	text-indent: 20px;
+	line-height: 40px;
+}
+
+.sidebar-nav li a {
+	display: block;
+	text-decoration: none;
+	color: #ddd;
+
+}
+
+.sidebar-nav li a:hover{
+	background: #16A085;
+}
 
 
 

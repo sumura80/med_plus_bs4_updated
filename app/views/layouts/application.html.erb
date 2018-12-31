@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Med Plus sidebar2</title>
+    <title>Med Plus Sidebar</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta charset="UTF-8">
-    <meta name=viewport content="width=device-width, initial-scale=1">
-    <!-- Font Awesome -->
+    <meta charset="UTF-8"> <meta name=viewport content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Fabicon -->
-    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png">
-    <!-- Raleway -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-</head>
+
+  </head>
 
   <body>
 
-   <%= render 'layouts/header' %>
-    <br>
-    <div class="container">
-       <% flash.each do |name, msg| %>
-        <div class="alert alert-<%= name == "notice" ? "success" : "danger" %>">
-          <a class="close" data-dismiss="alert">×</a> <!-- アラートダイアログに×ボタンをつける -->
-          <%= msg %>
-        </div>
-      <% end %>
 
-      <%= yield %>
-    </div>
+  <%= render 'layouts/header' %>
+ <div id="wrapper">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Setting</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div><!-- end of Sidebar -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <div class="container">
+             <% flash.each do |name, msg| %>
+              <div class="alert alert-<%= name == "notice" ? "success" : "error" %>">
+                <a class="close" data-dismiss="alert">×</a> <!-- アラートダイアログに×ボタンをつける -->
+                <%= msg %>
+              </div>
+            <% end %>
+            <%= yield %>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>  <!-- end of Page Content -->
+
+
+    
+
+  </div><!-- End of wrapper -->
+
+
+<!-- Menu togge javascript-->
+<script>
+  $("#menu-toggle").click(function (e){
+    e.preventDefault();
+    $("#wrapper").toggleClass("menuDisplayed");
+  }); 
+</script>
+
+
+
+ 
+
+
+
 
   </body>
 </html>
+
