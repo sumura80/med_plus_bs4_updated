@@ -6,6 +6,7 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 
+
 .message{
 	box-sizing: border-box;
 	background-color: #927A95;
@@ -167,7 +168,6 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
   line-height: 35px;
   background-color: #3d434c;
   color:#ffffff;
-  margin-top: 40px;
 }
 
 .footer-list-color{
@@ -242,6 +242,16 @@ ul.social-buttons li a:active {
 {
 	transition:all 0.3s ;
 }
+
+/*footer を最下部に固定
+https://coliss.com/articles/build-websites/operation/css/css-sticky-footer.html
+*/
+.main-content{
+	min-height: calc(70vh - 10px);
+}
+
+
+
 /* Footer End */
 
 
