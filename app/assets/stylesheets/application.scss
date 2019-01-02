@@ -160,6 +160,74 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*voteボタンの終了*/
 
 
+/*about page の開始*/
+.about-menu{
+	margin-right: 20px;
+}
+.about-menu-head{
+	margin-right:60px;
+}
+
+
+.jumbotron-about {
+	height:500px;
+  background-image: url("about-top-pic.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  color: #FFF;
+
+}
+
+/* Start About us intro */
+.whole-wrap{
+	background-color: #F5F5F5;
+}
+.about-info{
+	font-size: 1.1em
+}
+.about-wrap{
+	background-color: #FFF;
+	padding: 40px;
+}
+
+ 
+.about-explanation{
+	font-size: 1.1em
+}
+
+.progress{
+	margin-bottom: 25px;
+}
+
+/* End About us intro */
+
+
+
+/* Start Services */
+.service-wrap{
+	margin-top: 100px;
+}
+.service-cover{
+	margin-top: 50px;
+}
+
+.service-icon{
+	font-size: 50px;
+	text-align: center
+
+}
+
+.service-name{
+	text-align: center
+}
+.service-box{
+	background-color: #FFF;
+	padding: 15px;
+}
+/* End Services */
+
+
+/*about page の終了*/
 
 
 
@@ -177,7 +245,25 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
 @media (max-width: 768px) {
-  
+ .jumbotron-about h1,{
+	font-size: 2em;
+}
+ .jumbotron-about h3,{
+	font-size: 1.4em;
+}
+
+.jumbotron-about{
+	margin-top: 30px;
+	height: 300px;
+}
+.about-info{
+	margin-top: 1.2em;
+}
+
+.demanding-wrap{
+	margin-top: 1.2em;
+}
+
 }
 
 /*Medium (md) タブレット 768px から 992px まで*/

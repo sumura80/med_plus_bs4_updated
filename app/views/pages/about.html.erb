@@ -1,0 +1,256 @@
+<div class="whole-wrap">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"">
+ <div class="container-fluid">
+  <%= link_to "Med plus", root_path,class:"navbar-brand" %><span class="sr-only">(current)</span>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto about-menu-head">
+    	<li class="nav-item about-menu"><%= link_to "Top", new_post_path,class:"nav-link" %></li>	
+			<li class="nav-item about-menu"><%= link_to "About", new_post_path,class:"nav-link" %></li>	
+			<li class="nav-item about-menu"><%= link_to "Services", new_post_path,class:"nav-link" %></li>	
+			<li class="nav-item about-menu"><%= link_to "Work", new_post_path,class:"nav-link" %></li>	
+			<li class="nav-item about-menu"><%= link_to "Contact", new_post_path,class:"nav-link" %></li>	
+    
+
+    <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         <!-- 画像がある時の表示 -->
+          <% if current_user.user_image.present?  %>
+           <%= image_tag current_user.user_image_url,class:"img-circle header-circle-img" %>
+          <% else %>
+            <!-- デフォル時の表示 -->
+           <%= image_tag("default_user_image.png",class:"img-circle header-circle-img")%> 
+          <% end %> 
+          <%= current_user.username %>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
+        	<a><%= link_to "Log Out", destroy_user_session_path,method: :delete,class:"dropdown-item" %></a>
+          <a><%= link_to "Privacy", edit_user_registration_path,class:"dropdown-item" %></a>
+          <a class="dropdown-item" href="/users/<%= current_user.id %>">Account</a>
+          
+       
+        </div>
+      </li>
+
+      <% end %>  
+    </ul>
+
+  </div>
+</div><!-- end of container-fluit -->
+</nav>
+
+
+
+
+
+
+<br>
+<div class="container"><!-- Start of container -->
+   <% flash.each do |name, msg| %>
+    <div class="alert alert-<%= name == "notice" ? "success" : "danger" %>">
+      <a class="close" data-dismiss="alert">×</a> <!-- アラートダイアログに×ボタンをつける -->
+      <%= msg %>
+    </div>
+   <% end %>
+
+  <!-- Start main content -->
+<!-- 	   <h1>Pages#about</h1>
+		<p>Find me in app/views/pages/about.html.erb</p> -->
+
+</div><!-- End of container -->	
+
+ 
+
+
+
+<div class="jumbotron jumbotron-fluid jumbotron-about">
+  <div class="container-fluid text-center">
+    <h1 class="display-4">WE'RE HERE TO HELP YOU</h1>
+    <h3 class="mt-4">We provide support in a Japanese OTC medicines.</h3>
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+
+
+<!-- About Us start  -->
+<section id="about-us">
+    <div class="container">
+      <div class="row about-wrap">
+        <div class="col-sm-12">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-sm-6 col-md-5">
+                    <div class="med_plus_logo_pic">
+                    	<%= image_tag('med_plus_logo.png',class:"img-fluid") %>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-md-7">
+                    <div class="about-info">
+                      <p>Name: Med plus</p>
+                      <p>Email: info@lifeabroad.jp.</p>
+                      <p>URL: https://lifeabroad.jp.</p>
+                      <p>Established by: Lifeabroad</p>
+                      <p>Established in: 2019</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="demanding-wrap">
+                  <p class="demanding-rate lead">Demand Top 4</p>
+                  <span>Cold flu</span><span class="float-right">35%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 35%;" aria-valuenow="35" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>Yeast/Thrush</span><span class="float-right">30%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>Allergy</span><span class="float-right">20%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+
+                  <span>Sleep Aids</span><span class="float-right">15%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="about-us pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h3>
+                      About Us
+                    </h3>
+                  </div>
+                  <p class="about-explanation">
+                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
+                    imperdiet et, porttitor
+                    at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
+                    porttitor accumsan tincidunt.
+                  </p>
+                  <p class="about-explanation">
+                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
+                    porttitor volutpat. Vestibulum
+                    ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
+                  </p>
+                  <p class="about-explanation">
+                    Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
+                    Nulla porttitor accumsan
+                    tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                  </p>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- About Us End  -->
+
+
+
+
+  <!--Start of Services-->
+  <section id="service" class="service-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="text-center">
+            <h3 class="display-4">
+              Services
+            </h3>
+            <p class="text-center">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row service-cover">
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-icon">
+              <span class="icon-circle"><i class="fas fa-briefcase-medical"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="service-name">Med kit</h2>
+              <p class="service-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-icon">
+              <span class="icon-circle"><i class="fas fa-pills"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="service-name">Pills</h2>
+              <p class="service-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <div class="service-icon">
+              <span class="icon-circle"><i class="fas fa-file-medical"></i></span>
+            </div>
+            <div class="service-content">
+              <h2 class="service-name">OTC med</h2>
+              <p class="service-description text-center">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                provident vitae! Magni
+                tempora perferendis eum non provident.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- end of service-cover -->
+    </div><!-- end container -- >
+  </section>
+  <!--End of Start of Services-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	 <!-- End main content -->
+
+
+</div><!-- end of whole wrap -->
