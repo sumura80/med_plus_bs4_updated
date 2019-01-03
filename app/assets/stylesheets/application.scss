@@ -226,6 +226,32 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 }
 /* End Services */
 
+/*Start of middle med bar */
+.jumbotron-medbar{
+	height:300px;
+  background-image: url("about-med-bar.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  color: #FFF;
+  margin-top: 100px;
+}
+
+
+
+/*End of middle med bar */
+.team-wrap{
+	margin-top: 80px;
+}
+.team-line{
+	margin-top: 35px;
+	text-align: center;
+}
+.amazing-team{
+	text-align: center;
+	font-size: 3.0em;
+	margin-bottom: 40px;
+}
+
 
 /*about page の終了*/
 
@@ -245,10 +271,10 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
 @media (max-width: 768px) {
- .jumbotron-about h1,{
+ .jumbotron-about h1{
 	font-size: 2em;
 }
- .jumbotron-about h3,{
+ .jumbotron-about h3{
 	font-size: 1.4em;
 }
 
@@ -263,6 +289,19 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 .demanding-wrap{
 	margin-top: 1.2em;
 }
+
+.jumbotron-medbar h1{
+	font-size: 1.8em;
+}
+
+.jumbotron-medbar h3{
+	font-size: 1.4em;
+}
+
+.amazing-team{
+	font-size: 2em;
+}
+
 
 }
 

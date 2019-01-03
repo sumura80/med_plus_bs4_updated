@@ -8,7 +8,8 @@
 
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto about-menu-head">
-    	<li class="nav-item about-menu"><%= link_to "Top", new_post_path,class:"nav-link" %></li>	
+    	<li class="nav-item about-menu" id="returntop"><%= link_to "Home", new_post_path,class:"nav-link" %></li>	
+    
 			<li class="nav-item about-menu"><%= link_to "About", new_post_path,class:"nav-link" %></li>	
 			<li class="nav-item about-menu"><%= link_to "Services", new_post_path,class:"nav-link" %></li>	
 			<li class="nav-item about-menu"><%= link_to "Work", new_post_path,class:"nav-link" %></li>	
@@ -232,18 +233,54 @@
   <!--End of Start of Services-->
 
 
+ <!--Start of middle med bar-->
+<div class="jumbotron jumbotron-fluid jumbotron-medbar">
+  <div class="container-fluid text-center">
+    <h1>WE'RE HERE TO HELP YOU</h1>
+    <h3 class="mt-4">We provide support in a Japanese OTC medicines.</h3>
+  </div><!-- /.container -->
+</div><!-- /.jumbotron -->
+ <!--End of middle med bar-->
+
+
+
+<!--Start of our team-->
+<div class="team-wrap">
+  <div class="container">
+    <h4 class="amazing-team">OUR AMAZING TEAM</h4>
+    <div class="row text-center">
+
+      <div class="col-sm-12 col-md-4 ml-auto">
+          <div class="card mb-3">
+            <%= image_tag 'ceo.jpg', class:"card-img-top"%>
+            <div class="card-body">
+              <h5 class="card-title">C.S. Rusch</h5>
+              <p class="card-text">President, CEO, and Co-Founder</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-4 ml-auto">
+          <div class="card mb-3">
+             <%= image_tag 'vice_president.jpg', class:"card-img-top"%>
+            <div class="card-body">
+              <h5 class="card-title">K.Muraoka</h5>
+              <p class="card-text">Vice President and Co-Founder</p>
+            </div>
+          </div>
+        </div>   
+    </div>
 
 
 
 
+     <h4 class="team-line">WHENEVER YOU NEED HELP, WE ARE HERE FOR YOU.</h4>
+  </div>
+</div><!-- end of team wrap -->
 
 
 
-
-
-
-
-
+ <!--End of our team-->
 
 
 
@@ -254,3 +291,16 @@
 
 
 </div><!-- end of whole wrap -->
+
+
+<script type="text/javascript">
+$(window).on('scroll', function () {
+        backToTop();
+    });
+    $('#returntop').on('click', function (e) {
+        e.preventDefault();
+        $('html,body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+</script>
