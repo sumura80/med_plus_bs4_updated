@@ -235,10 +235,10 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
   color: #FFF;
   margin-top: 100px;
 }
-
-
-
 /*End of middle med bar */
+
+
+/*our amazing team 開始 */
 .team-wrap{
 	margin-top: 80px;
 }
@@ -251,7 +251,48 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 	font-size: 3.0em;
 	margin-bottom: 40px;
 }
+/* our amazing team 終了 */
 
+
+/* contact 開始 */
+.contact-wrap{
+	margin-top: 80px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-image: url(contact.jpg);
+	background-size:cover;
+}
+
+.contact-inside{
+	background-color: #FFF;
+	padding: 30px;
+
+}
+
+
+.contact-social-buttons{
+  height: 40px;
+  width: 40px;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  line-height: 1.4;
+  padding-left: 10px;
+  box-shadow: 0 0 0 3px #0078ff;
+  transition: all 500ms ease;
+}
+
+.contact-social-buttons:hover{
+  background-color: #53cb93;
+  box-shadow: 0 0 0 3px #108D8D;
+  transition: all 500ms ease;
+  
+}
+.contact-fab:hover{
+	color: #FFF;
+}
+
+
+/* contact 終了 */
 
 /*about page の終了*/
 
@@ -301,6 +342,7 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 .amazing-team{
 	font-size: 2em;
 }
+
 
 
 }

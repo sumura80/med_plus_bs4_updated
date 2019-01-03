@@ -135,20 +135,13 @@
                     </h3>
                   </div>
                   <p class="about-explanation">
-                    Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id
-                    imperdiet et, porttitor
-                    at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla
-                    porttitor accumsan tincidunt.
+                    Life Abroad is a labor of love by a long-time foreign resident of Japan and a native who understands the struggle. With the mass of misinformation and lack of easy-to-understand information online about living and prospering in Japan as a foreigner, we decided to create Life Abroad to be a comprehensive guide. 
                   </p>
                   <p class="about-explanation">
-                    Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus suscipit tortor eget felis
-                    porttitor volutpat. Vestibulum
-                    ac diam sit amet quam vehicula elementum sed sit amet dui. porttitor at sem.
+                    We want foreign residents living in Japan to be able to comfortably, conveniently, and confidentially find the information they need. Whether you’re an exchange student, here on business, visiting a friend, or a permanent resident that calls this wonderful country home, we believe you should have important and even life-saving information at your fingertips. 
                   </p>
                   <p class="about-explanation">
-                    Nulla porttitor accumsan tincidunt. Quisque velit nisi, pretium ut lacinia in, elementum id enim.
-                    Nulla porttitor accumsan
-                    tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.
+                    One of the many challenges that come with life here is the shadow of uncertainty lying in so many aspects of life. Through Life Abroad, we hope to be a light in the dark to give you the confidence to not just live, but thrive. We wish you the best on your journey, and we will be here with you every step of the way.
                   </p>
                 </div>
               </div>
@@ -271,16 +264,102 @@
         </div>   
     </div>
 
-
-
-
      <h4 class="team-line">WHENEVER YOU NEED HELP, WE ARE HERE FOR YOU.</h4>
   </div>
 </div><!-- end of team wrap -->
-
-
-
  <!--End of our team-->
+
+
+
+    <!--Start of contact -->
+    <section class="contact-wrap px-4">
+      <div class="container contact-inside">
+        <div class="row">
+          <div class="col-sm-12">
+                <div class="row">
+
+                  <div class="col-md-6">
+                      <h3 class="contact-left">
+                        Contact Us
+                      </h3>
+
+                    <div class="contact-form">
+                        <form action="" method="post" role="form" class="contactForm">
+                        <p>Feel free to ask us anything you would like know.</p>
+                        <div id="errormessage"></div>
+                        <div class="row">
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12 mb-3">
+                            <div class="form-group">
+                              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                              <div class="validation"></div>
+                            </div>
+                          </div>
+                          <div class="col-md-12">
+                            <button type="submit" class="btn btn-info">Send Message</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div><!-- end contact-form -->
+                  </div><!-- end col-md-6 -->
+
+                  <div class="col-md-6"><!-- start right side of contact -->
+                      <h3>Get in Touch</h3>
+
+
+                    <div class="contact-add">
+                      <p class="lead">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolorum dolorem soluta quidem
+                        expedita aperiam aliquid at.
+                        Totam magni ipsum suscipit amet? Autem nemo esse laboriosam ratione nobis
+                        mollitia inventore?
+                      </p>
+                      <p style="font-size:20px;"><i class="far fa-envelope"></i> contact@example.com</p>
+                    </div>
+
+              <div class="row"><!-- social buttons -->
+                <div class="col-sm-12 col-md-12">
+                    <ul class="list-inline">
+                        <li class="list-inline-item contact-social-buttons"><a href="https://www.facebook.com/lifeabroadjpn" target="_blank" ><i class="fab fa-facebook-f contact-fab"></i></a>
+                        </li>
+
+                        <li class="list-inline-item contact-social-buttons"><a href="https://twitter.com/lifeabroadjpn" target="_blank"><i class="fab fa-twitter contact-fab" style="font-size:90%;"></i></a>
+                        </li>
+                        
+
+                        <li class="list-inline-item contact-social-buttons"><a href="https://lifeabroadjpn.tumblr.com/" target="_blank">
+                        <i class="fab fa-tumblr contact-fab" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="list-inline-item contact-social-buttons"><a href="https://www.youtube.com/watch?v=LnmE5-uY4FY" target="_blank"><i class="fab fa-youtube contact-fab" style="font-size:80%;"></i></a>
+                        </li>                       
+                    </ul>
+                </div>
+                    </div>
+                  </div><!-- end right side of contact -->
+
+            </div><!-- end of row -->
+          </div><!-- end of col-sm-12 -->
+        </div>
+      </div>
+    </section>
+  <!--End of contact-->
+
+
+
+
+
+
 
 
 
@@ -288,7 +367,7 @@
 
 	
 	 <!-- End main content -->
-
+<%= render 'pages/footer' %>
 
 </div><!-- end of whole wrap -->
 
