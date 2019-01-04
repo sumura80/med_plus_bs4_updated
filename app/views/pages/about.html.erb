@@ -1,5 +1,5 @@
-<div class="whole-wrap">
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top"">
+<div class="whole-wrap" id="home">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
  <div class="container-fluid">
   <%= link_to "Med plus", root_path,class:"navbar-brand" %><span class="sr-only">(current)</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,13 +7,13 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto about-menu-head">
-    	<li class="nav-item about-menu" id="returntop"><%= link_to "Home", new_post_path,class:"nav-link" %></li>	
-    
-			<li class="nav-item about-menu"><%= link_to "About", new_post_path,class:"nav-link" %></li>	
-			<li class="nav-item about-menu"><%= link_to "Services", new_post_path,class:"nav-link" %></li>	
-			<li class="nav-item about-menu"><%= link_to "Work", new_post_path,class:"nav-link" %></li>	
-			<li class="nav-item about-menu"><%= link_to "Contact", new_post_path,class:"nav-link" %></li>	
+    <ul class="navbar-nav ml-auto about-menu-head" >
+      <li class="nav-item about-menu"><a href="#home" class="nav-link">Home</a></li>
+      <li class="nav-item about-menu"><a href="#about_us" class="nav-link">About Us</a></li>  
+      <li class="nav-item about-menu"><a href="#services" class="nav-link">Services</a></li>  
+      <li class="nav-item about-menu"><a href="#team" class="nav-link">Team</a></li>  
+      <li class="nav-item about-menu"><a href="#contact" class="nav-link">Contact</a></li>  
+	
     
 
     <% if user_signed_in? %>
@@ -72,13 +72,14 @@
 <div class="jumbotron jumbotron-fluid jumbotron-about">
   <div class="container-fluid text-center">
     <h1 class="display-4">WE'RE HERE TO HELP YOU</h1>
-    <h3 class="mt-4">We provide support in a Japanese OTC medicines.</h3>
-  </div><!-- /.container -->
+    <h3 class="mt-4" >We provide support in a Japanese OTC medicines.</h3>
+  </div ><!-- /.container -->
 </div><!-- /.jumbotron -->
+<div id="about_us" style="margin-bottom: 100px;"> </div>
 
 
 <!-- About Us start  -->
-<section id="about-us">
+<section >
     <div class="container">
       <div class="row about-wrap">
         <div class="col-sm-12">
@@ -153,10 +154,10 @@
 <!-- About Us End  -->
 
 
-
+<div id="services" style="margin-bottom: 100px;"> </div>
 
   <!--Start of Services-->
-  <section id="service" class="service-wrap">
+  <section id="services" class="service-wrap">
     <div class="container">
       <div class="row">
         <div class="col-sm-12">
@@ -230,12 +231,12 @@
 <div class="jumbotron jumbotron-fluid jumbotron-medbar">
   <div class="container-fluid text-center">
     <h1>WE'RE HERE TO HELP YOU</h1>
-    <h3 class="mt-4">We provide support in a Japanese OTC medicines.</h3>
+    <h3 class="mt-4" >We provide support in a Japanese OTC medicines.</h3>
   </div><!-- /.container -->
 </div><!-- /.jumbotron -->
  <!--End of middle med bar-->
 
-
+<div id="team" style="margin-bottom: 140px;"></div>
 
 <!--Start of our team-->
 <div class="team-wrap">
@@ -269,6 +270,8 @@
 </div><!-- end of team wrap -->
  <!--End of our team-->
 
+
+<div id="contact" style="margin-bottom: 40px;"> </div>
 
 
     <!--Start of contact -->
@@ -371,13 +374,27 @@
 
 
 <script type="text/javascript">
-$(window).on('scroll', function () {
-        backToTop();
+
+
+$(document).ready(function(){
+  $('a[href^="#"]').on('click', function(e){
+    e.preventDefault();
+
+
+    var target = this.hash;
+    var $target = $(target);
+
+    $('html, body').animate({
+      'scrollTop': $target.offset().top
+    }, 1000, 'swing', function() {
+      window.location.hash = target;
+    
     });
-    $('#returntop').on('click', function (e) {
-        e.preventDefault();
-        $('html,body').animate({
-            scrollTop: 0
-        }, 700);
-    });
+  });
+});
+
+
+
+
+
 </script>
