@@ -33,10 +33,11 @@
 		</p>
 		<div class="collapse" id="jp-description">
 		  <div class="card card-header">
-		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quasi perferendis accusantium aliquid iusto cupiditate! Est voluptate maxime modi, totam quis optio aspernatur esse excepturi dolore reiciendis consectetur officiis assumenda.
+		  	<h4><%= @post.title_jp %></h4>
+		    <p><%= h(@post.description_jp).gsub(/\n/, '<br/>').html_safe %></p>
 		  </div>
 		</div>
-
+		<!--アコーディオン 終了 -->
 
 
 
