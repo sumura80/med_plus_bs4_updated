@@ -163,11 +163,18 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*about page の開始*/
 .about-menu{
 	margin-right: 20px;
+
+}
+
+/* aboutページのnavだけhoverの色を変更　*/
+.navbar-dark .navbar-nav .about-menu a:hover{
+color: #53cb93;
 }
 
 
 .about-menu-head{
 	margin-right:60px;
+
 }
 
 
