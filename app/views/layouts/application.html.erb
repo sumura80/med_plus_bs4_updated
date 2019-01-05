@@ -24,6 +24,8 @@
     <%= render template:'pages/about' %>
   <% elsif current_page?(terms_path) %>
     <%= render template:'pages/terms' %>
+  <% elsif current_page?(privacy_path) %>
+    <%= render template:'pages/privacy' %>
   <% else %>
 
    <%= render 'layouts/header' %>

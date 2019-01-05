@@ -6,4 +6,8 @@ class PagesController < ApplicationController
   def terms
   	render "pages/terms"
   end
+
+  def privacy
+  	render "pages/privacy"
+  end
 end
