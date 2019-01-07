@@ -127,9 +127,7 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 	height: auto;
 }
 
-.def-img-btn{
-	margin-left: 60px;
-}
+
 
 /*headerの自己紹介画像*/
 .header-circle-img{
@@ -161,8 +159,15 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 
 
+/* Start of Account page開始 */
+.account-whole-wrap{
+	background-color: #F9F9F7;
+	padding: 45px 45px 90px 45px;
 
 
+}
+
+/* end of Account page  */
 
 
 
@@ -172,7 +177,10 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*---Media Queries --*/
 /*Extra Small (XS) 縦向きモバイル – 576px 以下*/
 @media (max-width: 576px) {
-  
+  .account-pic{
+  	width:200px;
+  	height: auto;
+  }
 }
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
