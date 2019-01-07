@@ -42,7 +42,13 @@
               <div class="col-md-12">
                  <div style="border-bottom: 2px solid blue; padding-top: 15px;"></div>
                 <div class="pt-4">
-                    <h5 class="title-left mb-4">Comment History</h5>
+                    <h5 class="title-left mb-4">Comment History</h5>   
+                      <% unless @comments.length >= 1 %>
+                       No comments yet.
+                      <% end %>
+                      
+                      
+                  
                      <% @comments.each do |comment| %>
                        <div class="comments_box_user ">
                         <div class="row"><!--colを使わなかったのでrow出なくてもいいかもしれない。-->
