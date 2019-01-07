@@ -1,5 +1,7 @@
 <!-- この_comment.html.erbは_formに記述した内容がpostsのshowページに表示される。 -->
-<div class="comments_box">
+ <div class="comments_box"> 
+
+
 	<!-- 改行を反映させるためのコマンド↓ -->   	
 <p><%= h(comment.content).gsub(/\n/, '<br/>').html_safe %></p>
 <p class="message-posted-by">Posted by 
