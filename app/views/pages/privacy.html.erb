@@ -26,16 +26,12 @@
           <% end %> 
           <%= current_user.username %>
         </a>
-
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown1">
           <a><%= link_to "Log Out", destroy_user_session_path,method: :delete,class:"dropdown-item" %></a>
           <a><%= link_to "Privacy", edit_user_registration_path,class:"dropdown-item" %></a>
-          <a class="dropdown-item" href="/users/<%= current_user.id %>">Account</a>
-          
-       
+          <a class="dropdown-item" href="/users/<%= current_user.id %>">Account</a>      
         </div>
       </li>
-
       <% end %>  
     </ul>
 
@@ -57,7 +53,6 @@
   <!-- Start main content -->
 <!--     <h1>Pages#about</h1>
     <p>Find me in app/views/pages/about.html.erb</p> -->
-
 </div><!-- End of flash container --> 
 
 
@@ -137,9 +132,6 @@
 
               In addition to the information provided automatically by your browser when you visit the Site, to become a subscriber to the Service you will need to register your email address. By registering, you are authorizing us to collect, store and use your email address in accordance with this Privacy Policy.<br><br>
               <div id="Share" class="mb-3"></div>
-
-
-
             </div>
           </div>
 
@@ -202,7 +194,6 @@
               If you have any questions regarding this Privacy Policy or the practices of this Site, please contact us by sending an email to info@lifeabroad.jp. 
             </div>
           </div>
-
         </div><!-- end of col-sm-9 -->
       </div><!-- end of row -->
 
@@ -221,8 +212,6 @@
 $(document).ready(function(){
   $('a[href^="#"]').on('click', function(e){
     e.preventDefault();
-
-
     var target = this.hash;
     var $target = $(target);
 
@@ -234,8 +223,6 @@ $(document).ready(function(){
     });
   });
 });
-
-
 </script>
 
 
