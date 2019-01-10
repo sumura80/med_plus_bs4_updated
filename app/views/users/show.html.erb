@@ -3,7 +3,6 @@
   <section class="account-whole-wrap">
     <div class="container">
       <div class="row">
-
           <div class="account-wrap">
             <div class="row">
               <div class="col-md-4 mb-4 mx-auto account-pic">
@@ -47,13 +46,10 @@
                       <% unless @comments.length >= 1 %>
                        No comments yet.
                       <% end %>
-                      
-                      
-                  
+
                      <% @comments.each do |comment| %>
                        <div class="comments_box_user ">
                         <div class="row"><!--colを使わなかったのでrow出なくてもいいかもしれない。-->
-
                             <div class="media"><!-- media object -->
                              <% if @user.user_image? %>
                                <%= image_tag @user.user_image_url,class:"comment_pic " %>
@@ -70,18 +66,11 @@
                         </div><!-- end of row -->
                         
                       </div><!-- end of comments_box_user-->
-                    <% end %><!-- end of comments.each -->
-
-
-
-                
+                    <% end %><!-- end of comments.each -->   
                 </div><!-- end of pt-4 -->
               </div><!-- end of col-md-12 -->
-
             </div><!-- end of row -->
           </div><!-- end of account-wrap -->
-
-
       </div><!-- end of row-->
     </div><!-- end of container -->
   </section>
