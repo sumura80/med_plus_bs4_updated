@@ -160,6 +160,150 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*voteボタンの終了*/
 
 
+/*about page の開始*/
+.about-menu{
+	margin-right: 20px;
+
+}
+
+/* aboutページのnavだけhoverの色を変更　*/
+.navbar-dark .navbar-nav .about-menu a:hover{
+color: #53cb93;
+}
+
+
+.about-menu-head{
+	margin-right:60px;
+
+}
+
+
+.jumbotron-about {
+	height:500px;
+  background-image: url("about-top-pic.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  color: #FFF;
+
+}
+
+/* Start About us intro */
+.whole-wrap{
+	background-color: #F5F5F5;
+}
+.about-info{
+	font-size: 1.1em
+}
+.about-wrap{
+	background-color: #FFF;
+	padding: 40px;
+}
+
+ 
+.about-explanation{
+	font-size: 1.1em
+}
+
+.progress{
+	margin-bottom: 25px;
+}
+
+/* End About us intro */
+
+
+
+/* Start Services */
+.service-wrap{
+	margin-top: 50px;
+}
+.service-cover{
+	margin-top: 50px;
+}
+
+.service-icon{
+	font-size: 50px;
+	text-align: center
+
+}
+
+.service-name{
+	text-align: center
+}
+.service-box{
+	background-color: #FFF;
+	padding: 15px;
+}
+/* End Services */
+
+/*Start of middle med bar */
+.jumbotron-medbar{
+	height:300px;
+  background-image: url("about-med-bar.jpg");
+  background-size: cover;
+  background-position: center 60%;
+  color: #FFF;
+  margin-top: 100px;
+}
+/*End of middle med bar */
+
+
+/*our amazing team 開始 */
+.team-wrap{
+	margin-top: 80px;
+}
+.team-line{
+	margin-top: 35px;
+	text-align: center;
+}
+.amazing-team{
+	text-align: center;
+	font-size: 3.0em;
+	margin-bottom: 40px;
+}
+/* our amazing team 終了 */
+
+
+/* contact 開始 */
+.contact-wrap{
+	margin-top: 80px;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	background-image: url(contact.jpg);
+	background-size:cover;
+}
+
+.contact-inside{
+	background-color: #FFF;
+	padding: 30px;
+
+}
+
+
+.contact-social-buttons{
+  height: 40px;
+  width: 40px;
+  font-size: 1.7rem;
+  border-radius: 50%;
+  line-height: 1.4;
+  padding-left: 10px;
+  box-shadow: 0 0 0 3px #0078ff;
+  transition: all 500ms ease;
+}
+
+.contact-social-buttons:hover{
+  background-color: #53cb93;
+  box-shadow: 0 0 0 3px #108D8D;
+  transition: all 500ms ease;
+  
+}
+.contact-fab:hover{
+	color: #FFF;
+}
+
+
+/* contact 終了 */
+
+/*about page の終了*/
 
 
 
@@ -177,7 +321,39 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
 @media (max-width: 768px) {
-  
+ .jumbotron-about h1{
+	font-size: 2em;
+}
+ .jumbotron-about h3{
+	font-size: 1.4em;
+}
+
+.jumbotron-about{
+	margin-top: 30px;
+	height: 300px;
+}
+.about-info{
+	margin-top: 1.2em;
+}
+
+.demanding-wrap{
+	margin-top: 1.2em;
+}
+
+.jumbotron-medbar h1{
+	font-size: 1.8em;
+}
+
+.jumbotron-medbar h3{
+	font-size: 1.4em;
+}
+
+.amazing-team{
+	font-size: 2em;
+}
+
+
+
 }
 
 /*Medium (md) タブレット 768px から 992px まで*/
