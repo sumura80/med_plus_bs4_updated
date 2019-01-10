@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!, only:[:show, :edit,:update]
-	before_action :check_user, only:[:edit]
+	before_action :check_user, only:[:edit,:update]
 
 	def show
 		@user = User.find(params[:id])
@@ -28,7 +28,7 @@ class UsersController < ApplicationController
 
   def check_user
   	@user = User.find(params[:id])
-		unless @user == current_user || current_user.admin?
+		unless (@user == current_user) || (current_user.admin?)
 			flash[:alert] = "Sorry, only User can edit"
 			redirect_to root_path
 		end
