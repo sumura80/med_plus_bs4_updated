@@ -160,12 +160,12 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*voteボタンの終了*/
 
 
+
 /* postのcommentに表示される小さい画像*/
 .com_pic{
 	width: 60px;
 	height: auto;
 }
-
 
 
 
@@ -180,7 +180,39 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
 @media (max-width: 768px) {
-  
+ .jumbotron-about h1{
+	font-size: 2em;
+}
+ .jumbotron-about h3{
+	font-size: 1.4em;
+}
+
+.jumbotron-about{
+	margin-top: 30px;
+	height: 300px;
+}
+.about-info{
+	margin-top: 1.2em;
+}
+
+.demanding-wrap{
+	margin-top: 1.2em;
+}
+
+.jumbotron-medbar h1{
+	font-size: 1.8em;
+}
+
+.jumbotron-medbar h3{
+	font-size: 1.4em;
+}
+
+.amazing-team{
+	font-size: 2em;
+}
+
+
+
 }
 
 /*Medium (md) タブレット 768px から 992px まで*/
