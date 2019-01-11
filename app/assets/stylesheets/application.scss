@@ -127,9 +127,7 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 	height: auto;
 }
 
-.def-img-btn{
-	margin-left: 60px;
-}
+
 
 /*headerの自己紹介画像*/
 .rounded-circle{
@@ -162,12 +160,6 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*voteボタンの終了*/
 
 
-
-/* postのcommentに表示される小さい画像*/
-.com_pic{
-	width: 60px;
-	height: auto;
-}
 
 
 /*about page の開始*/
@@ -315,19 +307,27 @@ color: #53cb93;
 
 /*about page の終了*/
 
-
+/* Start of Account page開始 */
+.account-whole-wrap{
+	background-color: #F9F9F7;
+	padding: 30px 10px 90px 10px;
+}
 
 
 
 /*---Media Queries --*/
 /*Extra Small (XS) 縦向きモバイル – 576px 以下*/
 @media (max-width: 576px) {
-  
+  .account-pic{
+  	width:200px;
+  	height: auto;
+  }
 }
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
 @media (max-width: 768px) {
- .jumbotron-about h1{
+
+.jumbotron-about h1{
 	font-size: 2em;
 }
  .jumbotron-about h3{
@@ -358,12 +358,11 @@ color: #53cb93;
 	font-size: 2em;
 }
 
-
-
 }
 
 /*Medium (md) タブレット 768px から 992px まで*/
 @media (max-width: 992px) {
+
 
   }
 

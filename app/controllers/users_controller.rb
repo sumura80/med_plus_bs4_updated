@@ -28,10 +28,12 @@ class UsersController < ApplicationController
 
   def check_user
   	@user = User.find(params[:id])
-		unless (@user == current_user) || (current_user.admin?)
+		 if current_user.admin?  || @user == current_user
+        return true
+    end
 			flash[:alert] = "Sorry, only User can edit"
 			redirect_to root_path
-		end
+		
 	end
 
 
