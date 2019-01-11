@@ -127,9 +127,7 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 	height: auto;
 }
 
-.def-img-btn{
-	margin-left: 60px;
-}
+
 
 /*headerの自己紹介画像*/
 .header-circle-img{
@@ -161,12 +159,6 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 
 
 
-/* postのcommentに表示される小さい画像*/
-.com_pic{
-	width: 60px;
-	height: auto;
-}
-
 
 
 
@@ -175,48 +167,21 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 /*---Media Queries --*/
 /*Extra Small (XS) 縦向きモバイル – 576px 以下*/
 @media (max-width: 576px) {
-  
+  .account-pic{
+  	width:200px;
+  	height: auto;
+
+  }
 }
 
 /*Small (sm) 横向きモバイル 576px から 768px まで*/
 @media (max-width: 768px) {
- .jumbotron-about h1{
-	font-size: 2em;
-}
- .jumbotron-about h3{
-	font-size: 1.4em;
-}
-
-.jumbotron-about{
-	margin-top: 30px;
-	height: 300px;
-}
-.about-info{
-	margin-top: 1.2em;
-}
-
-.demanding-wrap{
-	margin-top: 1.2em;
-}
-
-.jumbotron-medbar h1{
-	font-size: 1.8em;
-}
-
-.jumbotron-medbar h3{
-	font-size: 1.4em;
-}
-
-.amazing-team{
-	font-size: 2em;
-}
-
-
 
 }
 
 /*Medium (md) タブレット 768px から 992px まで*/
 @media (max-width: 992px) {
+
 
   }
 
