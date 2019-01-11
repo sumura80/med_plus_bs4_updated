@@ -20,17 +20,17 @@
             <p><%= link_to "詳細を見る", post_path(post),class:"btn btn-primary" %></p>
               <div class="index_icons"> 
                 <% if post.likes.size >= 1 %>
-                  <span class="fa fa-heart index_like-icon"></span><%= post.likes.size %> 
+                  <span class="far fa-heart index_like-icon"></span><%= post.likes.size %> 
                 <% else %>
-                  <span class="fa fa-heart index_like-icon_zero"></span><%= post.likes.size %>
+                  <span class="far fa-heart index_like-icon_zero"></span><%= post.likes.size %>
                 <% end %>
 
                 <span style="margin-right: 25px;"></span>
 
                <% if post.comments.size >= 1 %>
-                  <span class="fa fa-comments-o index_comments-icon"></span><%= post.comments.size %>  
+                  <span class="far fa-comments index_comments-icon"></span><%= post.comments.size %>  
                 <% else %>
-                  <span class="fa fa-comments-o index_comments-icon_zero"></span><%= post.comments.size %> 
+                  <span class="far fa-comments index_comments-icon_zero"></span><%= post.comments.size %> 
                 <% end %>
             </div>
           </div><!-- end of card body -->
