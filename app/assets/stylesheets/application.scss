@@ -21,7 +21,7 @@ body{
 	font-size: 1.4em;
 }
 
-/*index.html 全体を真ん中に寄せる*/
+/*index.html 全体を真ん中に寄せる*/	
 .center {
 	text-align:center;
 }
@@ -132,8 +132,10 @@ Bootstrap4からは、img-thumbnailを使用することにした*/
 }
 
 /*headerの自己紹介画像*/
-.header-circle-img{
+.rounded-circle{
 	width:30px;
+	height:30px;
+
 
 }
 
