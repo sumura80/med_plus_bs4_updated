@@ -6,69 +6,59 @@
 			<h2><%= @post.title %></h2>
 			<!-- <p class="message-posted-by">Posted by <%= @post.user.username %>
 				 <%= time_ago_in_words (@post.created_at) %> ago </p> -->
-				<p>種類: <%= @post.category.name %></p>
-			
+				<p>種類: <%= @post.category.name %></p>		
 				<!-- Likeボタンのコード/likeボタンの部分を_likes.html.erbにrender	 Start ↓ -->
 			  <%= render partial: '/likes/likes', locals: {post: @post} %>
 			  <!-- Likeボタンのコード	 End -->
-
 		</div><!-- end of col-md-4 -->
 
 
 
-      <!-- ここからshowの右画面 -->
+    <!-- ここからshowの右画面 -->
     <div class="col-md-7 offset-md-1">
-    		<!-- 改行を反映させるためのコマンド↓ -->   		
-				<p><%= h(@post.description).gsub(/\n/, '<br/>').html_safe %></p>
+    	<!-- 改行を反映させるためのコマンド↓ -->   		
+			<p><%= h(@post.description).gsub(/\n/, '<br/>').html_safe %></p>
 		</div><!-- end of col-md-7 col-md-offset-1 -->
 	</div><!-- row -->
 
-<br>
+		<br>
 		<!--ここから日本語を表示するためのアコーディオンを追加 -->
-			<p>
-		  <a class="btn btn-outline-info btn-block" data-toggle="collapse" href="#jp-description" role="button" aria-expanded="false" aria-controls="jp-description">
-		    See Japanese
-		  </a>
+		<p>
+	  <a class="btn btn-outline-info btn-block" data-toggle="collapse" href="#jp-description" role="button" aria-expanded="false" aria-controls="jp-description">
+	    See Japanese
+	  </a>
 		  
 		</p>
 		<div class="collapse" id="jp-description">
 		  <div class="card card-header">
-		    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis quasi perferendis accusantium aliquid iusto cupiditate! Est voluptate maxime modi, totam quis optio aspernatur esse excepturi dolore reiciendis consectetur officiis assumenda.
+		  	<h4><%= @post.title_jp %></h4>
+		    <p><%= h(@post.description_jp).gsub(/\n/, '<br/>').html_safe %></p>
 		  </div>
 		</div>
+		<!--アコーディオン 終了 -->
+	 <hr class="my-4">
+
+		<% if @comments_by_votes.length >= 2 %>
+		 <h3><%= @comments_by_votes.length %> Comments:</h3>
+		<% else %>
+		 <h3><%= @comments_by_votes.length %> Comment:</h3>
+		<% end %>
+		<%= render @comments_by_votes %>
 
 
+		<h3 class="reply-to-message">Reply to Post:</h3>
+		<%= render 'comments/form' %>
 
-
-	<hr class="my-4">
-
-
-
-	<% if @comments_by_votes.length >= 2 %>
-	 <h3><%= @comments_by_votes.length %> Comments:</h3>
-	<% else %>
-	 <h3><%= @comments_by_votes.length %> Comment:</h3>
-	<% end %>
-	<%= render @comments_by_votes %>
-
-
-
-
-	<h3 class="reply-to-message">Reply to Post:</h3>
-	<%= render 'comments/form' %>
-
-	
-
-	<div class="btn-group">
-			<%= link_to "Home", root_path, class:"btn btn-secondary" %>
-			<% if user_signed_in? %>
-				<% if current_user.admin? %>
-					<%= link_to "Edit", edit_post_path(@post), class:"btn btn-success" %>
-					<%= link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"} , class:"btn btn-danger"%>
+		<div class="btn-group">
+				<%= link_to "Home", root_path, class:"btn btn-secondary" %>
+				<% if user_signed_in? %>
+					<% if current_user.admin? %>
+						<%= link_to "Edit", edit_post_path(@post), class:"btn btn-success" %>
+						<%= link_to "Delete", post_path(@post),method: :delete,data:{confirm: "Are you sure?"} , class:"btn btn-danger"%>
+					<% end %>
 				<% end %>
-			<% end %>
-		</div>
-	</div>
+			</div>
+	</div><!-- end of message-show-- >
 	<br><br><br><br>
 
  
