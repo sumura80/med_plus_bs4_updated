@@ -11,7 +11,6 @@
       <li class="nav-item about-menu"><%= link_to "About Us", about_path,class:"nav-link" %></li>
       <li class="nav-item about-menu"><%= link_to "Terms of Service", terms_path, class:"nav-link" %></li>  
       <li class="nav-item about-menu active"><%= link_to "Privacy Policy", privacy_path, class:"nav-link" %></li> 
-  
     
 
     <% if user_signed_in? %>
@@ -38,7 +37,6 @@
   </div>
 </div><!-- end of container-fluit -->
 </nav>
-
 
 
 <br>
@@ -196,13 +194,14 @@
           </div>
         </div><!-- end of col-sm-9 -->
       </div><!-- end of row -->
-
     </div><!-- end container -- >
   </section>
   <!--End of Start of terms-->
 
-<br><br><br><br><br><br><br><br>
-  
+    <br><br><br>
+    <!-- Start of Footer -->
+    <%= render 'layouts/footer' %>
+    <!-- End of Footer -->
 </div><!-- end of whole-wrap -->
 
 

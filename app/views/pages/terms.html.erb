@@ -10,9 +10,7 @@
     <ul class="navbar-nav ml-auto about-menu-head" >
       <li class="nav-item about-menu"><%= link_to "About Us", about_path,class:"nav-link" %></li>
       <li class="nav-item about-menu active"><%= link_to "Terms of Service", terms_path, class:"nav-link" %></li>  
-      <li class="nav-item about-menu"><%= link_to "Privacy Policy", privacy_path, class:"nav-link" %></li> 
-	
-    
+      <li class="nav-item about-menu"><%= link_to "Privacy Policy", privacy_path, class:"nav-link" %></li>  
 
     <% if user_signed_in? %>
       <li class="nav-item dropdown">
@@ -40,10 +38,6 @@
 </nav>
 
 
-
-
-
-
 <br>
 <div class="container"><!-- Start of  flash container -->
    <% flash.each do |name, msg| %>
@@ -54,7 +48,7 @@
    <% end %>
 
   <!-- Start main content -->
-<!-- 	   <h1>Pages#about</h1>
+<!-- 	<h1>Pages#about</h1>
 		<p>Find me in app/views/pages/about.html.erb</p> -->
 </div><!-- End of flash container -->	
 
@@ -119,10 +113,7 @@
           </p>
           <br><br>
           <div id="GENERAL_CONDITIONS" class="mb-5"></div>
-          
-
-          
-          
+                 
 
           <div class="card mb-4">
             <div class="card-header">1. GENERAL CONDITIONS</div>
@@ -135,11 +126,8 @@
 
               The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
               <div id="ACCURACY" class="mb-3"></div>
-            </div>
-            
+            </div>          
           </div>
-
-
 
 
           <div class="card mb-4">
@@ -194,8 +182,6 @@
             </div>
           </div>
 
-
-
           <div class="card mb-4">
             <div class="card-header">6. THIRD-PARTY LINKS</div>
             <div class="card-body text-muted">
@@ -221,8 +207,6 @@
               <div id="PERSONAL" class="mb-3"></div>  
             </div>
           </div>
-
-
 
           <div class="card mb-4">
             <div class="card-header">8. PERSONAL INFORMATION</div>
@@ -338,18 +322,17 @@
               Questions about the Terms of Service should be sent to us at info@lifeabroad.jp.<br><br>    
             </div>
           </div>
-
-
-
         </div><!-- end of col-sm-9 -->
       </div><!-- end of row -->
-
     </div><!-- end container -- >
   </section>
   <!--End of Start of terms-->
 
-<br><br><br><br><br><br><br><br>
-  
+    <br><br><br>
+    <!-- Start of Footer -->
+    <%= render 'layouts/footer' %>
+    <!-- End of Footer -->
+
 </div><!-- end of whole-wrap -->
 
 <script type="text/javascript">
