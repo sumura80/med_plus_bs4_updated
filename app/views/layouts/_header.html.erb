@@ -41,20 +41,13 @@
           <%= link_to "Privacy Policy", privacy_path, class:"dropdown-item" %>
         </div>
       </li><!--end of pages dropdown -->
-
-
     </ul><!-- end of ul class="navbar-nav mr-auto" -->
-
-
-
-
 
 
 
     <ul class="navbar-nav">
       <% if user_signed_in? %>
       <li class="nav-item"><%= link_to "ログアウト", destroy_user_session_path,method: :delete,class:"nav-link" %></li>
-
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <!-- 画像がある時の表示 -->
@@ -74,7 +67,6 @@
       </li>
       <% end %>  
     </ul>
-
   </div>
 </div><!-- end of container-fluit -->
 </nav>
