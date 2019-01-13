@@ -1,17 +1,22 @@
-<h3 class="mt-4">ペットの種類一覧</h3>
+<h3 class="my-4">ペットの種類一覧</h3>
 <div class="center">
   <div class="row row-eq-height">
 
 
 <!-- Cards -->
+
 		<!-- Dogs -->
-  	<div class="col-md-3">
+  	<div class="col-sm-6 col-md-6 col-lg-3">
        <div class="card mb-3">
 			  <%= image_tag 'dogs.jpg', class:"card-img-top"%>
 			  <div class="card-body">
-			    <h4 class="card-title">犬</h4>
-			    <p class="card-text">犬の説明</p>
-			    <p><%= link_to "詳細を見る", categories_dogs_path,class:"btn btn-primary" %></p>
+			    <p class="card-text">
+			    	<h4 style="margin-top: -20px;">dog and dog</h4>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+			    </p>
+			    <div class="d-flex justify-content-between ">   
+             <div style="margin-bottom: 0px;"><%= link_to "View", categories_dogs_path,class:"btn btn-outline-success" %></div>
+						 <p class="text-muted"><%= @dogs.size %> items</p>
+          </div>
 			  </div>
 			</div>
     </div><!-- end of col-3 -->
@@ -19,7 +24,7 @@
 
 
     <!-- Cats -->
-  	<div class="col-md-3">
+  	<div class="col-sm-6 col-md-6 col-lg-3">
        <div class="card mb-3">
 			  <%= image_tag 'cats.png', class:"card-img-top"%>
 			  <div class="card-body">
@@ -31,7 +36,7 @@
     </div><!-- end of col-3 -->
 
     <!-- Rabbits -->
-  	<div class="col-md-3">
+  	<div class="col-sm-6 col-md-6 col-lg-3">
        <div class="card mb-3">
 			  <%= image_tag 'rabbits.jpg', class:"card-img-top"%>
 			  <div class="card-body">
@@ -43,11 +48,11 @@
     </div><!-- end of col-3 -->
 
         <!-- Rabbits -->
-  	<div class="col-md-3">
+  	<div class="col-sm-6 col-md-6 col-lg-3">
        <div class="card mb-3">
 			  <%= image_tag 'hedgehog.jpg', class:"card-img-top"%>
 			  <div class="card-body">
-			    <h4 class="card-title">ハリネズミ</h4>
+			    <h4 class="card-title">ハリネズミ ヘッジホッグ</h4>
 			    <p class="card-text">ウサギの説明</p>
 			    <%= link_to "詳細を見る", categories_rabbits_path,class:"btn btn-primary" %>
 			  </div>
