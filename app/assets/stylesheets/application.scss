@@ -29,10 +29,14 @@ body{
 
 
 /*/posts/show.html 全体の装飾　*/
+.show-whole-wrap{
+	margin-top: 45px;
+}
 .message-show{
 	background-color: #F4F6F6;
 	box-sizing: border-box;
-	padding:10px;
+	padding: 0px 15px 30px 15px;
+	margin-bottom: 30px;
 }
 
 .message-posted-by{
