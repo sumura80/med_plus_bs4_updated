@@ -33,7 +33,6 @@ class UsersController < ApplicationController
     end
 			flash[:alert] = "Sorry, only User can edit"
 			redirect_to root_path
-		
 	end
 
 
