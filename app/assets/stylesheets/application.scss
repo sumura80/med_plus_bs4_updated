@@ -6,6 +6,15 @@ body{
 	font-family: 'Raleway', sans-serif;
 }
 
+.jumbotron-login{
+	background: url("login_top.jpg");
+	background-size: cover;
+}
+
+.jumbotron-nologin{
+		background: url("jumbo-nonlogin 2.png");
+	background-size: cover;
+}
 
 .message{
 	box-sizing: border-box;
