@@ -3,17 +3,18 @@
   <div class="row row-eq-height">
    <% @dogs.each do |dog| %>
     <!-- Cards -->
-      <!-- Dogs -->
+    <!-- Dogs -->
     <div class="col-sm-6 col-md-6 col-lg-3">
        <div class="card mb-3">
           <% if dog.image? %>
-           <%= image_tag dog.image , class:"card-img-top" %>
+           <%= image_tag dog.image, class:"card-img-top" %>
           <% end %> 
 
   
         <div class="card-body">
           <p class="card-text card-bottom">
-            <h5 class="category-top"><%= dog.title %></h5>Lorem ipsum dolor amet echo park cronut typewriter, skateboard letterpress sriracha four dollar toast four loko raw denim godard coloring book.
+            <h5 class="category-top"><%= dog.title %></h5>
+            Lorem ipsum dolor amet echo park cronut typewriter, skateboard letterpress sriracha four dollar toast four loko raw denim godard coloring book.
           </p>
   
            <div class="view-margin"><%= link_to "View More", post_path(dog),class:"btn btn-outline-success btn-block" %></div>
@@ -41,7 +42,7 @@
     </div><!-- end of col-3 -->
    <% end %> <!-- end of @dogs.each do |dog| -->
  </div><!-- end of row  row-eq-height-->
+ <p><%= link_to "一覧に戻る", root_path,class:"btn btn-outline-secondary" %></p>
 </div><!-- end of center -->
 
-   <p><%= link_to "一覧に戻る", root_path,class:"btn btn-outline-secondary" %></p>
- 
+   
