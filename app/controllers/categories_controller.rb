@@ -1,5 +1,8 @@
 class CategoriesController < ApplicationController
 	def index	
+		@dogs = Post.where(:category_id => 1)	
+		@cats = Post.where(:category_id => 2)
+		@rabbits = Post.where(:category_id => 3)	
 	end
 
 	def dogs	
