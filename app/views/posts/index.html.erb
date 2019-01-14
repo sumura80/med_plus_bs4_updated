@@ -1,45 +1,56 @@
 <h3 class="index-wrap mt-4">Index page</h3>
  <h3><%= params[:category] %></h3>
+
  <div class="center">
   <div class="row row-eq-height">
-    <% if @posts.count == 0 %>
-    <h3>There are no posts in this category yet </h3>
-    <% else %>
+
+  <% if @posts.count == 0 %>
+      <h3>There are no posts in this category yet </h3>
+  <% else %>
+
     <% @posts.each do |post| %>
-         <!-- Cards -->
-         <!-- Dogs -->
-        <div class="col-md-3">
-         <div class="card mb-3">
-          <% if post.image? %>
-           <%= image_tag post.image , class:"card-img-top" %>
-          <% end %> 
-          <div class="card-body">
-            <h5 class="card-title"><%= post.title %></h5>
+    <!-- Cards -->
+      <!-- Dogs -->
 
-            <p class="card-text">犬の説明</p>
-            <p><%= link_to "詳細を見る", post_path(post),class:"btn btn-primary" %></p>
-              <div class="index_icons"> 
-                <% if post.likes.size >= 1 %>
-                  <span class="far fa-heart index_like-icon"></span><%= post.likes.size %> 
-                <% else %>
-                  <span class="far fa-heart index_like-icon_zero"></span><%= post.likes.size %>
-                <% end %>
+        <div class="col-sm-6 col-md-6 col-lg-3">
+           <div class="card mb-3">
+              <% if post.image? %>
+               <%= image_tag post.image, class:"card-img-top" %>
+              <% end %> 
 
-                <span style="margin-right: 25px;"></span>
+      
+            <div class="card-body">
+              <p class="card-text card-bottom">
+                <h5 class="category-top"><%= post.title %></h5>
+                Lorem ipsum dolor amet echo park cronut typewriter, skateboard letterpress sriracha four dollar toast four loko raw denim godard coloring book.
+              </p>
+      
+               <div class="view-margin"><%= link_to "View More", post_path(post),class:"btn btn-outline-success btn-block" %></div>
+               <!-- like and comment numbers -->
+               <div class="icons-nums pt-3">
+                  <div class="index_icons"> 
+                    <% if post.likes.size >= 1 %>
+                      <span class="far fa-heart index_like-icon"></span><%= post.likes.size %> 
+                    <% else %>
+                      <span class="far fa-heart index_like-icon_zero"></span><%= post.likes.size %>
+                    <% end %>
 
-               <% if post.comments.size >= 1 %>
-                  <span class="far fa-comments index_comments-icon"></span><%= post.comments.size %>  
-                <% else %>
-                  <span class="far fa-comments index_comments-icon_zero"></span><%= post.comments.size %> 
-                <% end %>
-            </div>
-          </div><!-- end of card body -->
+                  <span style="margin-right: 25px;"></span>
 
-        </div><!-- end of card -->
-      </div><!-- end of col-3 -->
+                    <% if post.comments.size >= 1 %>
+                      <span class="far fa-comments index_comments-icon"></span><%= post.comments.size %>  
+                    <% else %>
+                      <span class="far fa-comments index_comments-icon_zero"></span><%= post.comments.size %> 
+                    <% end %>
+                </div>
+               </div><!-- end of like and comment numbers -->
+            </div><!-- end of card-body -->
 
-    <% end %>
-    <% end %>
+          </div><!-- end of card mb-3 -->
+        </div><!-- end of col-3 -->
+
+      <% end %><!-- end of @posts.each do |post| -->
+    <% end %><!-- end of if @posts.count == 0 -->
   </div>
- <p><%= link_to "一覧に戻る", root_path,class:"btn btn-default" %></p>
+ <p class="mt-4"><%= link_to "一覧に戻る", root_path,class:"btn btn-outline-secondary" %></p>
 </div>

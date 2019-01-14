@@ -1,17 +1,24 @@
 <h3 class="mt-4">ネコ一覧</h3>
  <div class="center">
   <div class="row row-eq-height">
-    
     <% @cats.each do |cat| %>
-      <div class="col-xs-12 col-sm-6 col-md-4">
-       <div class="thumbnail message"> 
-        <% if cat.image? %>
-         <%= link_to (image_tag cat.image.url), cat  %>
-        <% end %> 
+    <!-- Cards -->
+      <!-- Dogs -->
+    <div class="col-sm-6 col-md-6 col-lg-3">
+       <div class="card mb-3">
+          <% if cat.image? %>
+           <%= image_tag cat.image, class:"card-img-top"  %>
+          <% end %> 
 
-         <div class="caption">
-            <h3 clas="message-title"><%= cat.title %></h3>   
-             <p><%= link_to "View message", post_path(cat),class:"btn btn-default" %></p>
+  
+        <div class="card-body">
+          <p class="card-text card-bottom">
+            <h5 class="category-top"><%= cat.title %></h5>Lorem ipsum dolor amet echo park cronut typewriter, skateboard letterpress sriracha four dollar toast four loko raw denim godard coloring book.
+          </p>
+  
+           <div class="view-margin"><%= link_to "View More", post_path(cat),class:"btn btn-outline-success btn-block" %></div>
+           <!-- like and comment numbers -->
+           <div class="icons-nums pt-3">
               <div class="index_icons"> 
                 <% if cat.likes.size >= 1 %>
                   <span class="far fa-heart index_like-icon"></span><%= cat.likes.size %> 
@@ -19,22 +26,22 @@
                   <span class="far fa-heart index_like-icon_zero"></span><%= cat.likes.size %>
                 <% end %>
 
-                <span style="margin-right: 25px;"></span>
+              <span style="margin-right: 25px;"></span>
 
-               <% if cat.comments.size >= 1 %>
+                <% if cat.comments.size >= 1 %>
                   <span class="far fa-comments index_comments-icon"></span><%= cat.comments.size %>  
                 <% else %>
                   <span class="far fa-comments index_comments-icon_zero"></span><%= cat.comments.size %> 
                 <% end %>
             </div>
-          </div> 
+           </div><!-- end of like and comment numbers -->
+        </div><!-- end of card-body -->
 
-
-       </div><!-- end of thumbnail -->
-      </div><!-- end of col-xs-12 col-sm-6 col-md-4 -->
-     <% end %> 
+      </div><!-- end of card mb-3 -->
+    </div><!-- end of col-3 -->
+   <% end %> <!--  @cats.each do |cat| -->
   </div><!-- end of row row-eq-height -->
-  <p><%= link_to "一覧に戻る", root_path,class:"btn btn-default" %></p>
+  <p><%= link_to "一覧に戻る", root_path,class:"btn btn-outline-secondary" %></p>
 </div><!-- end of center -->
 
 
