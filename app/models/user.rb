@@ -14,7 +14,7 @@ class User < ApplicationRecord
   #(case_sensitive: :falssは大文字小文字の区別をしないということ）
   validates :username,
    uniqueness: { case_sensitive: :true },
-  length: { minimum: 4, maximum: 20 }
+  length: { minimum: 3, maximum: 20 }
   
  #↓論理削除をするためのparanoiaの導入
   acts_as_paranoid
