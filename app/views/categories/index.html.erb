@@ -11,10 +11,10 @@
 			  <%= image_tag 'dogs.jpg', class:"card-img-top"%>
 			  <div class="card-body">
 			    <p class="card-text">
-			    	<h4 class="category-top">dog and dog</h4>This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+			    	<h4 class="category-top">dog and dog</h4>Lorem ipsum dolor amet echo park cronut typewriter, skateboard letterpress sriracha four dollar toast four loko raw denim godard coloring book lo-fi hoodie kickstarter craft beer. Disrupt next level williamsburg pop-up ethical raclette. Enamel pin glossier next level vaporware knausgaard. Vexillologist lo-fi kinfolk fam messenger bag selfies.
 			    </p>
 			    <div class="d-flex justify-content-between">   
-             <div class="view-margin"><%= link_to "View", categories_dogs_path,class:"btn btn-outline-success" %></div>
+             <div class="view-margin"><%= link_to "View Dogs", categories_dogs_path,class:"btn btn-outline-success" %></div>
 						 <p class="text-muted"><%= @dogs.size %> items</p>
           </div>
 			  </div>
@@ -24,40 +24,56 @@
 
 
     <!-- Cats -->
-  	<div class="col-sm-6 col-md-6 col-lg-3">
-       <div class="card mb-3">
+		<div class="col-sm-6 col-md-6 col-lg-3">
+      <div class="card mb-3">
 			  <%= image_tag 'cats.png', class:"card-img-top"%>
 			  <div class="card-body">
-			    <h4 class="card-title">ネコ</h4>
-			    <p class="card-text">ネコの説明</p>
-			    <%= link_to "詳細を見る", categories_cats_path,class:"btn btn-primary" %>
+			    <p class="card-text">
+			    	<h4 class="category-top">ネコの説明</h4>TJean shorts street art paleo williamsburg. Live-edge woke cliche 8-bit, post-ironic street art hashtag vexillologist pitchfork tumblr gentrify tbh unicorn succulents. Cronut cred butcher air plant marfa hoodie heirloom art party 3 wolf moon shaman. Crucifix stumptown etsy pug 3 wolf moon plaid next level gochujang taxidermy. 
+			    </p>
+			    <div class="d-flex justify-content-between">   
+             <div class="view-margin"><%= link_to "View Cats", categories_cats_path,class:"btn btn-outline-success" %></div>
+						 <p class="text-muted"><%= @cats.size %> items</p>
+          </div>
 			  </div>
 			</div>
     </div><!-- end of col-3 -->
 
-    <!-- Rabbits -->
-  	<div class="col-sm-6 col-md-6 col-lg-3">
-       <div class="card mb-3">
+
+     <!-- Rabbits -->
+		<div class="col-sm-6 col-md-6 col-lg-3">
+      <div class="card mb-3">
 			  <%= image_tag 'rabbits.jpg', class:"card-img-top"%>
 			  <div class="card-body">
-			    <h4 class="card-title">ウサギ</h4>
-			    <p class="card-text">ウサギの説明</p>
-			    <%= link_to "詳細を見る", categories_rabbits_path,class:"btn btn-primary" %>
+			    <p class="card-text">
+			    	<h4 class="category-top">what is rabbit</h4>Pop-up gochujang lyft tumeric snackwave, irony next level seitan. Vexillologist farm-to-table flexitarian quinoa, hammock offal polaroid live-edge before they sold out roof party celiac. Photo booth next level blue bottle squid. Leggings twee mixtape, hell of plaid flexitarian cliche. Taiyaki fashion axe mixtape mumblecore live-edge.
+			    </p>
+			    <div class="d-flex justify-content-between">   
+             <div class="view-margin"><%= link_to "View Rabbits", categories_rabbits_path,class:"btn btn-outline-success" %></div>
+						 <p class="text-muted"><%= @rabbits.size %> items</p>
+          </div>
 			  </div>
 			</div>
     </div><!-- end of col-3 -->
 
-        <!-- Rabbits -->
-  	<div class="col-sm-6 col-md-6 col-lg-3">
-       <div class="card mb-3">
+
+    <!-- Headhog -->
+		<div class="col-sm-6 col-md-6 col-lg-3">
+      <div class="card mb-3">
 			  <%= image_tag 'hedgehog.jpg', class:"card-img-top"%>
 			  <div class="card-body">
-			    <h4 class="card-title">ハリネズミ ヘッジホッグ</h4>
-			    <p class="card-text">ウサギの説明</p>
-			    <%= link_to "詳細を見る", categories_rabbits_path,class:"btn btn-primary" %>
+			    <p class="card-text">
+			    	<h4 class="category-top">headhog</h4>Stumptown affogato pitchfork distillery kogi. Street art raclette pickled live-edge enamel pin tattooed yuccie health goth unicorn direct trade vice vape activated charcoal. Skateboard cold-pressed disrupt meh, la croix mustache enamel pin butcher semiotics try-hard blog kale chips irony live-edge umami. Crucifix keytar you probably haven't heard of them, VHS tote bag microdosing vice coloring book.
+			    </p>
+			    <div class="d-flex justify-content-between">   
+             <div class="view-margin"><%= link_to "View Rabbits", categories_rabbits_path,class:"btn btn-outline-success" %></div>
+						 <p class="text-muted"><%= @rabbits.size %> items</p>
+          </div>
 			  </div>
 			</div>
     </div><!-- end of col-3 -->
+
+
 
 
   </div><!-- end of row row-eq-height -->
