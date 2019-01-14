@@ -49,6 +49,14 @@ gem 'rails-ujs'
 gem 'paranoia', '~> 2.4', '>= 2.4.1'
 
 
+group :development, :test do
+  #Debuggのために追加
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
