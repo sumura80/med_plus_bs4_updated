@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'categories/dogs' ,to: 'categories#dogs'
   get 'categories/cats' ,to: 'categories#cats'
   get 'categories/rabbits' ,to: 'categories#rabbits'
+  get 'categories/pain_relief' ,to: 'categories#pain_relief'
 
   #userのshowページ作成URL
   resources :users, only:[:show, :edit, :update]

@@ -3,6 +3,7 @@ class CategoriesController < ApplicationController
 		@dogs = Post.where(:category_id => 1)	
 		@cats = Post.where(:category_id => 2)
 		@rabbits = Post.where(:category_id => 3)	
+		@pain_reliefs = Post.where(:category_id => 4)	
 	end
 
 	def dogs	
@@ -17,5 +18,9 @@ class CategoriesController < ApplicationController
 
 	def rabbits
 		@rabbits = Post.where(:category_id => 3)	
+	end
+
+		def pain_relief
+		@pain_relief = Post.where(:category_id => 4)
 	end
 end
