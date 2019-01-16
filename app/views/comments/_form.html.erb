@@ -16,9 +16,15 @@
     <%= form.label :content,"Comment" %>
     <%= form.text_area :content, class: "form-control" %>
   </div>
+  
 
   <div class="actions" data-toggle="tooltip" title="Please Sign up to post" >
-    <%= form.submit "Post", class:"btn btn-info post-btn" %>
+    <% if user_signed_in? %>
+      <%= form.submit "Post", class:"btn btn-info post-btn" %>
+    <% else %>
+      <%= link_to "Sign up to Post", new_user_registration_path, class:"btn btn-info" %>
+   <% end %> 
   </div>
+
 <% end %>
   
