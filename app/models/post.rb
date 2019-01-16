@@ -1,5 +1,7 @@
 class Post < ApplicationRecord
 	mount_uploader :image, ImageUploader
+	mount_uploader :image_2, ImageUploader
+	mount_uploader :image_3, ImageUploader
 	belongs_to :user
 	has_many :comments
 	has_many :likes
